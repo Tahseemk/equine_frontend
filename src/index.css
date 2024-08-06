@@ -1,0 +1,66 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.cdnfonts.com/css/typewriter');
+
+body{
+  font-family: "Inter", sans-serif;
+}
+.mix-bg{
+  background-image: linear-gradient(to right, #F1EAD1 70%, #fff 30%);
+}
+.border--bottom{
+  position: relative;
+  overflow: hidden;
+}
+.border--bottom:before {
+  content: "";
+  width: 570px;
+  height: 1px;
+  background-color: #f0ebd4;
+  right: -20%;
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.bg--gray{
+  background-color: #F1EAD1;
+}
+
+.century-gothic{
+  font-family: century-gothic, sans-serif;
+  letter-spacing: .3px;
+}
+
+.itc-american {
+  font-family: itc-american-typewriter, serif;
+  letter-spacing: .3px;
+  font-weight: 500;
+}
+
+
+@media (max-width: 1280px){
+  .side--bar {
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+    transform:translate3d(100vw,0,0);
+    transition:transform .3s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+  }
+  .open--slider {
+    transform:translate3d(0vw,0,0);
+
+    transition:transform .3s ease-in-out;
+  }
+}
+@media (max-width: 1024px){
+  .mix-bg{
+    background-image: linear-gradient(to right, #F1EAD1 70%, #F1EAD1 30%);
+  }
+}
